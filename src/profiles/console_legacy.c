@@ -11,9 +11,9 @@ Profile profile_init_console_legacy() {
     Profile profile = Profile_();
 
     profile.select_1 = Button_(PIN_SELECT_1, NORMAL, ACTIONS(GAMEPAD_SELECT));
-    profile.select_2 = Button_(PIN_SELECT_2, NORMAL, ACTIONS(KEY_NONE));
+    profile.select_2 = Button_(PIN_SELECT_2, NORMAL, ACTIONS(KEY_F12));
     profile.start_1 =  Button_(PIN_START_1,  NORMAL, ACTIONS(GAMEPAD_START));
-    profile.start_2 =  Button_(PIN_START_2,  NORMAL, ACTIONS(KEY_NONE));
+    profile.start_2 =  Button_(PIN_START_2,  NORMAL, ACTIONS(GAMEPAD_A));
 
     profile.dpad_left =  Button_(PIN_DPAD_LEFT,  NORMAL, ACTIONS(GAMEPAD_LEFT));
     profile.dpad_right = Button_(PIN_DPAD_RIGHT, NORMAL, ACTIONS(GAMEPAD_RIGHT));
@@ -29,8 +29,8 @@ Profile profile_init_console_legacy() {
     profile.r1 = Button_(PIN_R1, NORMAL, ACTIONS(GAMEPAD_R1));
     profile.l2 = Button_(PIN_L2, NORMAL, ACTIONS(GAMEPAD_AXIS_LZ));
     profile.r2 = Button_(PIN_R2, NORMAL, ACTIONS(GAMEPAD_AXIS_RZ));
-    profile.l4 = Button_(PIN_L4, NORMAL, ACTIONS(GAMEPAD_A));
-    profile.r4 = Button_(PIN_R4, NORMAL, ACTIONS(GAMEPAD_B));
+    profile.l4 = Button_(PIN_L4, NORMAL, ACTIONS(GAMEPAD_START));
+    profile.r4 = Button_(PIN_R4, NORMAL, ACTIONS(GAMEPAD_R3));
 
     profile.rotary =     Rotary_(NULL, ACTIONS(MOUSE_SCROLL_UP), ACTIONS(MOUSE_SCROLL_DOWN));
 
@@ -60,11 +60,11 @@ Profile profile_init_console_legacy() {
     );
 
     profile.gyro = Gyro_(
-        GYRO_MODE_ALWAYS_OFF,
-        PIN_NONE,
-        ACTIONS(KEY_NONE), ACTIONS(KEY_NONE),  // X rotation.
-        ACTIONS(KEY_NONE), ACTIONS(KEY_NONE),  // Y rotation.
-        ACTIONS(KEY_NONE), ACTIONS(KEY_NONE)   // Z rotation.
+        GYRO_MODE_TOUCH_ON,
+        PIN_TOUCH_IN,
+        ACTIONS(MOUSE_X_NEG), ACTIONS(MOUSE_X),  // X rotation.
+        ACTIONS(MOUSE_Y_NEG), ACTIONS(MOUSE_Y),  // Y rotation.
+        ACTIONS(KEY_NONE), ACTIONS(KEY_NONE)     // Z rotation.
     );
 
     return profile;

@@ -44,12 +44,7 @@ Profile profile_init_home() {
     profile.x = Button_(PIN_X, NORMAL, ACTIONS(KEY_BACKSPACE));
     profile.y = Button_(PIN_Y, NORMAL, ACTIONS(KEY_SPACE));
 
-    profile.l1 = Button_(
-        PIN_L1,
-        HOLD_EXCLUSIVE_LONG,
-        ACTIONS(KEY_LEFT_SUPER, KEY_D),
-        ACTIONS(KEY_LEFT_ALT, KEY_ENTER)
-    );
+    profile.l1 = Button_(PIN_L1, NORMAL, ACTIONS(KEY_PRTSCN));
     profile.r1 = Button_(PIN_R1, STICKY, ACTIONS(KEY_LEFT_ALT), ACTIONS(KEY_TAB));
     profile.l2 = Button_(PIN_L2, NORMAL, ACTIONS(MOUSE_2));
     profile.r2 = Button_(PIN_R2, NORMAL, ACTIONS(MOUSE_1));
@@ -70,12 +65,12 @@ Profile profile_init_home() {
         // Right.
         Button_(PIN_VIRTUAL, HOLD_EXCLUSIVE,
             ACTIONS(PROC_MACRO, KEY_O, KEY_K, KEY_SPACE),
-            ACTIONS(PROC_MACRO, KEY_Y, KEY_E, KEY_S, KEY_SPACE)
+            ACTIONS(PROC_MACRO, KEY_A, KEY_H, KEY_A, KEY_H, KEY_A, KEY_H, KEY_A, KEY_SPACE)
         ),
         // Up.
         Button_(PIN_VIRTUAL, HOLD_EXCLUSIVE,
-            ACTIONS(PROC_MACRO, KEY_H, KEY_E, KEY_L, KEY_L, KEY_O, KEY_SPACE),
-            ACTIONS(PROC_MACRO, KEY_G, KEY_G, KEY_SPACE)
+            ACTIONS(PROC_MACRO, KEY_G, KEY_G, KEY_SPACE),
+            ACTIONS(PROC_MACRO, KEY_H, KEY_E, KEY_Y, KEY_SPACE)
         ),
         // Down.
         Button_(PIN_VIRTUAL, HOLD_EXCLUSIVE,

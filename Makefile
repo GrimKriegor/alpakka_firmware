@@ -3,7 +3,7 @@
 
 default: version
 	mkdir -p build
-	cmake . -B build && cd build && make
+	cmake -DCMAKE_BUILD_TYPE=Debug . -B build && cd build && make
 
 rebuild: version
 	cd build && make

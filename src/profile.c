@@ -180,7 +180,7 @@ void profile_init() {
     profiles[PROFILE_CONSOLE_LEGACY] = profile_init_console_legacy();
     profiles[PROFILE_DESKTOP] =        profile_init_desktop();
     profiles[PROFILE_RACING] =         profile_init_racing();
-    profiles[PROFILE_FLIGHT] =         profile_init_none();  // TODO: Flight
+    profiles[PROFILE_FLIGHT] =         profile_init_flight();
     profiles[PROFILE_RTS] =            profile_init_none();  // TODO: RTS.
     profile_set_active(config_get_profile());
 }

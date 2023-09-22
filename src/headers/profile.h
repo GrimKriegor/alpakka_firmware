@@ -76,6 +76,7 @@ Profile profile_init_console();
 Profile profile_init_console_legacy();
 Profile profile_init_desktop();
 Profile profile_init_racing();
+Profile profile_init_flight();
 
 extern bool profile_led_lock;
 extern bool profile_pending_reboot;

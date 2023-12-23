@@ -12,7 +12,7 @@ Profile profile_init_fps_fusion() {
 
     profile.select_1 = Button_(PIN_SELECT_1, NORMAL, ACTIONS(KEY_TAB));
     profile.start_1 =  Button_(PIN_START_1,  NORMAL, ACTIONS(KEY_ESCAPE));
-    profile.select_2 = Button_(PIN_SELECT_2, NORMAL, ACTIONS(KEY_M));
+    profile.select_2 = Button_(PIN_SELECT_2, NORMAL, ACTIONS(KEY_F12));
     profile.start_2 =  Button_(PIN_START_2,  NORMAL, ACTIONS(KEY_N));
 
     profile.dpad_left =  Button_(PIN_DPAD_LEFT,  NORMAL, ACTIONS(KEY_LEFT));

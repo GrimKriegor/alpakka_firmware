@@ -20,9 +20,9 @@
 
 #define CFG_LED_BRIGHTNESS 0.2
 
-#define CFG_TICK_FREQUENCY 250  // Hz.
+#define CFG_TICK_FREQUENCY 1000  // Hz.
 #define CFG_TICK_INTERVAL  (1000 / CFG_TICK_FREQUENCY)
-#define CFG_IMU_TICK_SAMPLES 128  // Multi-sampling per pooling cycle.
+#define CFG_IMU_TICK_SAMPLES 32  // Multi-sampling per pooling cycle.
 #define CFG_HID_REPORT_PRIORITY_RATIO 8
 
 #define CFG_CALIBRATION_SAMPLES_THUMBSTICK 100000  // Samples.

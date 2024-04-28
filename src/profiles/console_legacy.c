@@ -58,8 +58,14 @@ void config_profile_default_console_legacy(CtrlProfile *profile){
         .mode=NORMAL,
         .actions={GAMEPAD_START},
     };
-    profile->sections[SECTION_SELECT_2].button = (CtrlButton){};
-    profile->sections[SECTION_START_2].button = (CtrlButton){};
+    profile->sections[SECTION_SELECT_2].button = (CtrlButton){
+        .mode=NORMAL,
+        .actions={KEY_F12},
+    };
+    profile->sections[SECTION_START_2].button = (CtrlButton){
+        .mode=NORMAL,
+        .actions={GAMEPAD_A},
+    };
 
     // Triggers.
     profile->sections[SECTION_L1].button = (CtrlButton){
@@ -80,11 +86,11 @@ void config_profile_default_console_legacy(CtrlProfile *profile){
     };
     profile->sections[SECTION_L4].button = (CtrlButton){
         .mode=NORMAL,
-        .actions={GAMEPAD_A},
+        .actions={GAMEPAD_START},
     };
     profile->sections[SECTION_R4].button = (CtrlButton){
         .mode=HOLD_OVERLAP,
-        .actions={GAMEPAD_B},
+        .actions={GAMEPAD_R3},
     };
 
     // DHat.
@@ -165,6 +171,17 @@ void config_profile_default_console_legacy(CtrlProfile *profile){
 
     // Gyro.
     profile->sections[SECTION_GYRO].gyro = (CtrlGyro){
-        .mode=GYRO_MODE_OFF,
+        .mode=GYRO_MODE_TOUCH_ON,
+        .engage=PIN_TOUCH_IN,
+    };
+    profile->sections[SECTION_GYRO_X].gyro_axis = (CtrlGyroAxis){
+        .actions_neg={MOUSE_X_NEG},
+        .actions_pos={MOUSE_X},
+        .hint_pos="Mouse",
+    };
+    profile->sections[SECTION_GYRO_Y].gyro_axis = (CtrlGyroAxis){
+        .actions_neg={MOUSE_Y_NEG},
+        .actions_pos={MOUSE_Y},
+        .hint_pos="Mouse",
     };
 }
